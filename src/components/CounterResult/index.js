@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const CounterResult = () => {
+    const {countReducer} = useSelector((state) => state);
+
     return (
         <div>
-            <h1>0</h1>
+            <h1>{countReducer.total}</h1>
         </div>
     )
 }
