@@ -24,7 +24,7 @@ const CounterAction = () => {
     }
 
     const handleReset = () => {
-        const result = countReducer.total;
+        const result = 0;
         dispatch({
             type: TYPES.RESET,
             payload: result
