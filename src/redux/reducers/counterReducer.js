@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET } from "../types";
+import TYPES from "../types";
 
 const countState = {
     total: 0,
@@ -6,17 +6,17 @@ const countState = {
 
 const countReducer = (state = countState, action) => {
     switch (action.type) {
-        case INCREMENT:
+        case TYPES.INCREMENT:
             return {
                 ...state,
                 total: state.total + 1
             };
-        case DECREMENT:
+        case TYPES.DECREMENT:
             return {
                 ...state,
                 total: state.total - 1
             }
-        case RESET :
+        case TYPES.RESET :
             return {
                 ...state,
                 total: 0,

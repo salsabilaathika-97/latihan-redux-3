@@ -1,17 +1,17 @@
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
-const RESET = 'RESET';
+// const INCREMENT = 'INCREMENT';
+// const DECREMENT = 'DECREMENT';
+// const RESET = 'RESET';
 
-export {
-    INCREMENT,
-    DECREMENT,
-    RESET
-}
-
-// const TYPES = {
-//     INCREMENT: 'INCREMENT',
-//     DECREMENT: 'DECREMENT',
-//     RESET: 'RESET'
+// export {
+//     INCREMENT,
+//     DECREMENT,
+//     RESET
 // }
 
-// export default TYPES
+const TYPES = {
+    INCREMENT: 'INCREMENT',
+    DECREMENT: 'DECREMENT',
+    RESET: 'RESET'
+}
+
+export default TYPES

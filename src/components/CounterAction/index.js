@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { INCREMENT, DECREMENT, RESET } from "../../redux/types";
+import TYPES from "../../redux/types";
 
 const CounterAction = () => {
 
@@ -8,19 +8,19 @@ const CounterAction = () => {
 
     const handlePlus = () => {
         dispatch({
-                type: INCREMENT,
+                type: TYPES.INCREMENT,
             });
     }
 
     const handleMinus = () => {
         dispatch({
-            type: DECREMENT,
+            type: TYPES.DECREMENT,
         })
     }
 
     const handleReset = () => {
         dispatch({
-            type: RESET,
+            type: TYPES.RESET,
         })
     }
 
