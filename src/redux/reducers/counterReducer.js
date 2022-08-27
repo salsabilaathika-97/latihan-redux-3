@@ -9,17 +9,17 @@ const countReducer = (state = countState, action) => {
         case TYPES.INCREMENT:
             return {
                 ...state,
-                total: state.total + 1
+                total: action.payload,
             };
         case TYPES.DECREMENT:
             return {
                 ...state,
-                total: state.total - 1
+                total: action.payload,
             }
         case TYPES.RESET :
             return {
                 ...state,
-                total: 0,
+                total: action.payload,
             }
         default:
             return state;

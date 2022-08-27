@@ -1,26 +1,33 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import TYPES from "../../redux/types";
 
 const CounterAction = () => {
 
     const dispatch = useDispatch();
+    const {countReducer} = useSelector((state) => state);
 
     const handlePlus = () => {
+        const result = countReducer.total + 1;
         dispatch({
                 type: TYPES.INCREMENT,
+                payload: result
             });
     }
 
     const handleMinus = () => {
+        const result = countReducer.total - 1;
         dispatch({
             type: TYPES.DECREMENT,
+            payload: result
         })
     }
 
     const handleReset = () => {
+        const result = countReducer.total;
         dispatch({
             type: TYPES.RESET,
+            payload: result
         })
     }
 
