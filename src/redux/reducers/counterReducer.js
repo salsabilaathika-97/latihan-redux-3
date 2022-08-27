@@ -9,6 +9,16 @@ const countReducer = (state = countState, action) => {
                 ...state,
                 total: state.total + 1
             };
+        case 'DECREMENT':
+            return {
+                ...state,
+                total: state.total - 1
+            }
+        case 'RESET' :
+            return {
+                ...state,
+                total: 0,
+            }
         default:
             return state;
     }

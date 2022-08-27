@@ -11,11 +11,23 @@ const CounterAction = () => {
             });
     }
 
+    const handleMinus = () => {
+        dispatch({
+            type: "DECREMENT",
+        })
+    }
+
+    const handleReset = () => {
+        dispatch({
+            type: "RESET",
+        })
+    }
+
     return (
         <div>
             <button onClick={handlePlus}>+</button>
-            <button>-</button>
-            <button>Reset</button>
+            <button onClick={handleMinus}>-</button>
+            <button onClick={handleReset}>Reset</button>
         </div>
     )
 }
